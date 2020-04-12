@@ -42,6 +42,11 @@ optional arguments:
   --list-languages      List all available source/destination languages
 ```
 
+### Autosub all video in folder
+```
+nohup sh -c 'find /export/DockerData/deluge/downloads/course_videos/ -type f \( -iname \*.mp4 -o -iname \*.MP4 \) -exec autosub "{}" \;' 2>&1&
+```
+
 ### License
 
 MIT
