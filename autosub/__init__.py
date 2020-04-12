@@ -347,6 +347,11 @@ def validate(args):
         print("Error: You need to specify a source path.")
         return False
 
+    source_file_name, source_file_extension = os.path.splitext(args.source_path)
+    if os.path.isfile(source_file_name + '.srt'):
+        print("Error: Subtitle is existing")
+        return False
+
     return True
 
 
